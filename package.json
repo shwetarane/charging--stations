@@ -1,5 +1,4 @@
 {
-  "homepage": "http://shwetarane.github.io/charging--stations"
   "name": "charging-stations",
   "version": "0.1.0",
   "private": true,
@@ -7,7 +6,6 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "deploy": "gh-pages -d build"
   },
   "dependencies": {
     "axios": "^0.19.2",
