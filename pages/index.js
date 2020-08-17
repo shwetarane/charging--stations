@@ -8,6 +8,8 @@ export default class Search extends React.Component{
     super(props);
     this.state = {
       value: '',
+      latitude: '',
+      longitude:'',
       stations: []
     };
 
@@ -28,6 +30,12 @@ export default class Search extends React.Component{
       .catch((error)=> {
         console.log({...error})
    });
+  //  navigator.geolocation.getCurrentPosition(function(position) {
+  //   console.log("Latitude is :", position.coords.latitude);
+  //   console.log("Longitude is :", position.coords.longitude);
+  //   let latitude = position.coords.latitude;
+  //   let longitude = position.coords.longitude;
+  // });
 }
 
   handleChange(event){
@@ -70,7 +78,7 @@ export default class Search extends React.Component{
               <p className="card-text">Available: {station.access_days_time}</p>
               <p className="card-text">Charging Instructions: {station.intersection_directions}</p>
               <p className="card-text">EV Price: {station.ev_pricing}</p>
-              <p className="card-text">Address: {station.street_address}, {station.zip}</p>
+              <p className="card-text">Address: <a href={`http://maps.google.com/maps?saddr=`+`${station.latitude}`+","+`${station.longitude}`} target="_blank">{station.street_address}, {station.zip}</a></p>
 
           </div>
         </div>)}

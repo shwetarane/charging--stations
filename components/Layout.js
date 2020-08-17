@@ -4,11 +4,12 @@ import Nav from './Nav.js';
 
 
 const Layout = (props) => (
-  <div>
+  <html>
     <Head>
       <title>Charging Stations</title>
       <meta name="viewport" content="initial-scale=1.0, width=device-width" />
       <link rel="stylesheet" href="https://bootswatch.com/4/lux/bootstrap.min.css" />
+      
     </Head>
     <body >
         <Nav />
@@ -20,7 +21,7 @@ const Layout = (props) => (
         </div>
         
     </body>
-  </div>
+  </html>
 )
 
 export default Layout;
